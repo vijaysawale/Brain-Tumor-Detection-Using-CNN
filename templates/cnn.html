@@ -1,0 +1,76 @@
+﻿{% extends "base.html" %} {% block content %}
+{% block maintitle%} About Us | {% endblock maintitle %}
+{% block body %}
+
+
+<!--Section Of Info-->
+<section class="jumbotron text-center">
+    <div>
+        <img src="/static/images/2.jpeg" alt="logo" width="480" height="360">
+        <h1 class="jumbotron-heading">About Convolutional Neural Network(CNN) Model</h1>
+       
+    </div>
+</section>
+<!--Section of Info-->
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 blog-main">
+            <h3 class="pb-4 mb-4 font-italic border-bottom">About Our Proposed CNN Model :</h3>
+                <div class="blog-post">
+                <!-- <h4 class="blog-post-title">Plasmodium Falciparum</h4> -->
+                    <p>The proposed CNN has three convolutional layers and two fully connected layers. The input to the model constitutes
+                    segmented cells of 100 × 100 × 3 pixel resolution. The convolutional layers use 3 × 3 filters with 2 pixel strides. The
+                    first and second convolutional layers have 32 filters and the third convolutional layer has 64 filters. The sandwich
+                    design of convolutional/rectified linear units (ReLU) and proper weight initialization enhances the learning process
+                    . Max-pooling layers with a pooling window of 2 × 2 and 2 pixel strides follow the convolutional
+                    layers for summarizing the outputs of neighboring neuronal groups in the feature maps. The pooled output of the third
+                    convolutional layer is fed to the first fully-connected layer that has 64 neurons, and the second fully connected layer
+                    feeds into the Softmax classifier. Dropout regularization with a dropout ratio of 0.5 is
+                    applied to outputs of the first fully connected layer. The model is trained by optimizing the multinomial logistic
+                    regression objective using stochastic gradient descent (SGD). The customized model is optimized for hyper-parameters by
+                    a randomized grid search method.</p>
+                </div>
+        </div>
+
+        <!-- Links For github facebook  -->
+        <aside class="col-md-4 blog-sidebar">
+            <div class="p-4 mb-3 bg-light rounded">
+                <h4> About CNN</h4>
+                <p class="mb-0">In deep learning, a convolutional neural network is a class of deep neural networks, most commonly applied to analyzing
+                visual imagery. They are also known as shift invariant or space invariant artificial neural networks, based on their
+                shared-weights architecture and translation invariance characteristics. They have applications in image and video
+                recognition, recommender systems, image classification, medical image analysis, natural language processing, and
+                financial time series. CNNs are regularized versions of multilayer perceptrons. Multilayer perceptrons usually mean
+                fully connected networks, that is, each neuron in one layer is connected to all neurons in the next layer. The
+                "fully-connectedness" of these networks makes them prone to overfitting data. Typical ways of regularization include
+                adding some form of magnitude measurement of weights to the loss function.</p>
+            </div>
+        </aside>
+        <!-- End Links For github facebook  -->
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock body %}
+{% endblock %}

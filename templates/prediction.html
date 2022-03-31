@@ -1,0 +1,62 @@
+{% extends "base.html" %} {% block content %}
+
+
+<!--Section Of Info-->
+<section class="jumbotron text-center">
+    <div>
+        <img src="/static/images/mosquito.png" alt="logo" width="120">
+        <h1 class="jumbotron-heading" ><span id="typed"></span><span class="typed-cursor ">Malaria Detection System</span></h1>
+        <p class="lead text-muted">
+            Malaria parasites can be identified by examining under the microscope, a drop of patient's blood is spread out as a "blood smear" on a microscope slide. <br>
+            By uploading a clear image of RBC cells of the patient, our application will predict whether the person is infected or not.<br>
+            For this we are using  3 layer architecture of CNN model. By how much percentage the person is infected will be mentioned,  if the result is positive .<br>
+            Also the test and precautions the patient must take, will be stated in the result. <br>
+            The model has limitations and cannot be used for definite clinical predictions! Instead it can be used for research and comparison purposes (please see notes below).
+        </p>
+    </div>
+</section>
+<!--Section of Info-->
+
+<div class="container">
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+            Select Image
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Detect</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result">
+        <span> </span>
+    </h3>
+
+</div><br><br><br>
+
+<div class="container">
+    <section>
+        <h4>Notes :</h4>
+    <p class="lead text-muted">
+        This deep learning model has been trained and validated, using the following dataset: <a href="https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria">The Datascience Company</a><br>
+        <b style="color:red;">The suitability of this deep learning model for clinical use has not been validated. <br>
+        Therefore it cannot be used for any clinical purpose! It can be used for research purposes and for comparison with other similar models.</b>
+    </p>
+</section>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+{% endblock %}

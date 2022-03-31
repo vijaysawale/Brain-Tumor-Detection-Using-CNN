@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% block content %}
+{% block title %} Home {% endblock title %}
+{% block body %}
+
+<!--Section Of Info-->
+<section class="jumbotron text-center">
+    <div>
+        <img src="/static/images/2.jpeg" alt="logo" width="360" height="240">
+        <h1 class="jumbotron-heading" >Brain Tumour Detection and Classification System</h1>
+        <p class="lead text-muted">This web application is based on a Convolutional Neural Network (CNN), trained to recognise Brain Tumour in human brain MRI images.<br>
+        </p>
+        <a href="/home/monster/mini-project/templates/braintumour.html" class="btn btn-danger my-2">About Brain Tumours</a>
+        <a href="/checksample" class="btn btn-success my-2">Check Your MRI Samples</a>
+        <a href="/cnn" class="btn btn-info my-2">About CNN Model</a>
+    </div>
+</section>
+<!--Section of Info-->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 blog-main">
+            <h3 class="pb-4 mb-4 font-italic border-bottom">About Web-Application :</h3>
+            <div class="blog-post">
+                <p>This web-application is under development. You can use this web-application for classifying the brain tumour into its types</p>
+                <p>The web-application is developed on flask & python. The model which we are using in this application can classify the brain MRI images with accuracy of
+                more than 90%. We are using the convoluntional neural network (CNN) a deep learning algorithm for classifying the MRI images. we are using tensorflow, keras, seaborn,
+                matplotlib, pandas etc for creating the model.  
+                </p>
+        
+            </div>
+        </div>
+            
+        <!-- Links For github facebook  -->
+        <aside class="col-md-4 blog-sidebar">
+            <div class="p-4 mb-3 bg-light rounded">
+                <h4> About Brain Tumours</h4>
+                <p class="mb-0">A brain tumor is a collection, or mass, of abnormal cells in your brain. Your skull, which encloses your brain, is very rigid. Any growth inside such a restricted space can cause problems. Brain tumors can be cancerous (malignant) or noncancerous (benign). When benign or malignant tumors grow, they can cause the pressure inside your skull to increase. This can cause brain damage, and it can be life-threatening.</p>
+            </div>
+        </aside>
+        <!-- End Links For github facebook  -->
+    </div>
+</div>     
+
+
+
+{% endblock body %}
+
+{% endblock %}

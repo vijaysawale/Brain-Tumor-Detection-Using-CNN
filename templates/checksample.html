@@ -1,0 +1,61 @@
+﻿{% extends "base1.html" %} {% block content %}
+
+<style>
+body {
+  background: #555;
+}
+
+.content {
+  max-width: 280px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+}
+</style>
+
+<div class="content">
+<script>
+
+</script>
+<div>
+  <div>
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+       &nbsp&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp<label for="imageUpload" class="upload-label">
+            Upload Here
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+  
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+          &nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp<a type="button" class="btn btn-info" id="btn-predict" onclick="myFunction()">Get Result</a>
+        </div>
+    </div>
+    
+    <div class="loader" style="display:none;"></div>
+    <!--img src="/static/preprocessing_result/brain_out.jpg"-->
+    <h3 id="result">
+        <span> </span>
+    </h3>
+
+</div>
+</div>
+<!-- Footer -->
+<!-- <footer class="page-footer font-small blue" style="position:fixed; left: 0; bottom: 0; width: 100%;"> -->
+
+  <!-- Copyright -->
+  <!-- <div class="footer-copyright text-center py-3">© 2020 Copyright: -->
+    <!-- <a href="/">Brain Tumour Detection and Classification System</a> -->
+    <!-- <a href="#">Back to top</a> -->
+  <!-- </div> -->
+<!-- </footer> -->
+
+<!-- Footer -->
+
+
+{% endblock %}
